@@ -245,7 +245,7 @@ function Show-MainForm {
         $logo.Width = 650
         $logo.Height = 70
         $logo.Location = New-Object System.Drawing.Point(10, 10)
-        $logo.Image = [System.Drawing.Image]::FromFile(("I:\DIB\Security Access Control\Целеполагание\Алексей\Фото Т1.png"))
+        $logo.Image = [System.Drawing.Image]::FromFile((Join-Path $PSScriptRoot "logo.png")) # Замените на путь к вашему логотипу
         $logo.SizeMode = "Zoom"
         $tabMain.Controls.Add($logo)
     } catch {
@@ -1226,4 +1226,5 @@ try {
 } finally {
     Close-Logging
 }
+
 #endregion
